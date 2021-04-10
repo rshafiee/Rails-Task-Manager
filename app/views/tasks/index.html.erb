@@ -1,9 +1,19 @@
-<h1>List of the tasks</h1>
+<div class="container">
+  <h2 class="page-title">To do List</h2>
 
-<ul>
-  <% @tasks.each do |task| %>
-  <li><%= link_to task.title, task_path(task) %></li>
-  <% end %>
-</ul>
+  <ul>
+    <% @tasks.each do |task| %>
+    <li><%= link_to task.title, task_path(task) %></li>
+    <% end %>
+  </ul>
+
+  <div class="btn-group" role="group" aria-label="Basic example">
+  <button type="button" class="btn btn-primary"><%= link_to 'Create a new task', new_path %></button>
+  <button type="button" class="btn btn-secondary ml-2"><%= link_to 'Update the tasks', tasks_path %></button>
+
+  </div>
+
+
+</div>
 
 <%#= link_to 'Create a new task', new_path %>

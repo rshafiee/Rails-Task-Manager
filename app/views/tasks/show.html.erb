@@ -1,12 +1,17 @@
-<h2>Title of the Task: <%= @task.title %></h2>
-<p>Description: <%= @task.details %></p>
-<p>Completed: <%= @task.completed %></p>
+<div class="container">
+  <h2>Title of the Task: <%= @task.title %></h2>
+  <p>Description: <%= @task.details %></p>
+  <p>Completed: <%= @task.completed %></p>
+  <div>
+    <button type="button" class="btn btn-warning mt-3"><%= link_to "Delete #{@task.title}",
+    task_path(@task),
+    method: :delete,
+    data: { confirm: "Are you sure?"} %></button>
+  </div>
+  <br>
+  <br>
+  <button class="btn btn-link"><%= link_to 'Back to Tasks', tasks_path %></button>
+</div>
 
-<%= link_to "Delete #{@task.title}",
-task_path(@task),
-method: :delete,
-data: { confirm: "Are you sure?"} %>
 
-<br>
-<br>
-<button><%= link_to 'Back to Tasks', tasks_path %></button>
+

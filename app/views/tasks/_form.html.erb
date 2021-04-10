@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="form-group">
+    <%= simple_form_for(@task) do |f| %>
+      <%= f.input :title, class: "form-input" %>
+      <%= f.input :details, class: "form-input" %>
+      <%= f.input :completed %>
+      <%= f.submit class: "btn btn-secondary" %>
+    <% end %>
+  <button class="btn btn-link"><%= link_to 'Back to Tasks', tasks_path %></button>
+  </div>
+</div>
+

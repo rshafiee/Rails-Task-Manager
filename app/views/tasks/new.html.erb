@@ -1,11 +1,6 @@
-<h1>Create new tasks here</h1>
+<div class="container">
+  <h2>Create new tasks here</h2>
 
-<%= form_for(@task) do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <%= f.label :details %>
-  <%= f.text_field :details %>
-  <%= f.label :completed %>
-  <%= f.check_box :completed %>
-  <%= f.submit %>
-<% end %>
+</div>
+  <%= render "form", task: @task %>
+

@@ -13,3 +13,20 @@
  *= require_tree .
  *= require_self
  */
+@import "bootstrap/scss/bootstrap";
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #ffefcf;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  width: 650px;
+}
+
+.btn-group a {
+  text-decoration: none !important;
+  color: white;
+}
+
